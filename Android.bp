@@ -100,4 +100,16 @@ cc_library_static {
     export_generated_headers: ["wayland_extension_client_protocol_headers"],
 }
 
+cc_library_headers {
+         name: "wayland_proto_inc",
+         generated_headers: [
+		"wayland_extension_server_protocol_headers",
+		"wayland_extension_client_protocol_headers",
+         ],
+	 export_generated_headers: [
+		"wayland_extension_server_protocol_headers",
+		"wayland_extension_client_protocol_headers",
+	],
+}
+
 subdirs = ["flinger_headers"]
